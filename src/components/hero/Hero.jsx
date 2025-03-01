@@ -1,3 +1,4 @@
+import BlurText from "../BlurText";
 import "./hero.scss";
 import { motion } from "framer-motion";
 
@@ -31,7 +32,7 @@ const sliderVariants = {
     x: "-220%",
     transition: {
       repeat: Infinity,
-      repeatType:"mirror",
+      repeatType: "mirror",
       duration: 20,
     },
   },
@@ -47,10 +48,15 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>HARVEY TYLER</motion.h2>
-          <motion.h1 variants={textVariants}>
-            Web developer and UI designer
-          </motion.h1>
+          <motion.h2 variants={textVariants}>NGUYEN KIM NGAN</motion.h2>
+          <BlurText
+            text="Content Marketing "
+            delay={150}
+            animateBy="words"
+            direction="top"
+            // onAnimationComplete={handleAnimationComplete}
+            className={"text-aniamtion"}
+          />
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
               See the Latest Works
@@ -74,7 +80,7 @@ const Hero = () => {
         Writer Content Creator Influencer
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero.png" alt="" />
+        <img src="/nganbg.png" alt="" className="size-img" />
       </div>
     </div>
   );

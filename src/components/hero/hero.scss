@@ -73,10 +73,20 @@
       bottom: 0;
     }
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  .size-img {
+    width: 1000px !important;
+    height: 1000px !important;
+
+    @include mobile {
+      width: 100% !important;
+      height: 100% !important;
     }
   }
 
@@ -88,5 +98,9 @@
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
+  }
+
+  .text-aniamtion {
+    font-size: 40px;
   }
 }
